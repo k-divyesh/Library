@@ -1,0 +1,82 @@
+:root {
+    /* colorPallet */
+    --main: #00FDDC;
+    --background: #343330;
+    --secondary: #F15152;
+    --font: #E7E6F7;
+}
+
+
+
+body, html {
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(to top left, #656565, #808782);
+    background-attachment: fixed;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    padding: 10vh 0;
+    display: flex;
+    gap: 20%;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+header {
+    position: sticky;
+    top: calc(15vh + 6% + 0.2rem);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    margin: 15vh 0;
+    padding: 6% 0.5%;
+    color: var(--main);
+    background-color: var(--secondary);
+    letter-spacing: 0.3rem;
+    text-decoration: underline;
+    text-decoration-color: var();
+    text-decoration-skip-ink: none;
+}
+
+h1 {
+    
+}
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    width: 60vw;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    gap: 5%;
+}
+
+.card{
+    border: 7.5px solid var(--secondary);
+    border-radius: 30px;
+    aspect-ratio: 1;
+    font-size: 2em;
+    color: rgb(23, 56, 94);
+    word-wrap: break-word;
+    padding: 2px;
+    text-shadow:3px 3px 500px red;
+}
+
+#addOption {
+    position: fixed;
+    top: 80%;
+    left: 90%;
+    width: 5rem;
+    border: 5px solid var(--secondary);
+    background-color: transparent;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    font-size: 3.5em;
+    color: var(--main);
+}
+
