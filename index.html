@@ -10,20 +10,33 @@
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header><h1><i>Library</i></h1></header>
-    <main>
-        <div class="card">long name of any book out there</div>
-        <div class="card">book two</div>
+    <header><h1>library</h1></header>
+    <main id="cardContainer">
         <div class="card"></div>
-        <div class="card">sdfd</div>
-        <div class="card"></div>
-
     </main>
 
     <button type="button" id="addOption">+</button>
+
+    <div id="addBookForm" class="hidden">
+        <form id="form">
+            <label for="bookName">Book Name:</label>
+            <input id="bookName" type="text" required>
+            <br>
+            <label for="author">Author:</label>
+            <input id="author" min="5" max="15" type="text" required>
+            <br>
+            <label for="pages">Total Pages:</label>
+            <input type="text" max="999" min="10" id="pages" required>
+            <br>
+            <input type="checkbox" id="read">
+            <label for="read">Read</label>
+            <br>
+            <button id="submitButton" type="submit">Submit</button>
+            
+        </form>
+    </div>
 </body>
 </html>

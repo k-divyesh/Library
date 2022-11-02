@@ -1,9 +1,12 @@
 :root {
     /* colorPallet */
-    --main: #00FDDC;
-    --background: #343330;
-    --secondary: #F15152;
-    --font: #E7E6F7;
+    --main: #FFFBFB;
+    --background: #F0EEF1;
+    --green: #9FFF9C;
+    --font: #050505;
+    --red: #FF9C9C;
+    /* border */
+    --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 
@@ -11,41 +14,36 @@
 body, html {
     padding: 0;
     margin: 0;
-    background-image: linear-gradient(to top left, #656565, #808782);
-    background-attachment: fixed;
+    background-color: var(--background);
 }
 
 *{
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', 'Roboto', sans-serif;
 }
 
 body {
     padding: 10vh 0;
     display: flex;
-    gap: 20%;
-    justify-content: start;
-    align-items: flex-start;
+    gap: 15%;
+    align-items: start;
 }
 
 header {
     position: sticky;
-    top: calc(15vh + 6% + 0.2rem);
+    top: 200px;
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    margin: 15vh 0;
     padding: 6% 0.5%;
-    color: var(--main);
-    background-color: var(--secondary);
-    letter-spacing: 0.3rem;
-    text-decoration: underline;
-    text-decoration-color: var();
-    text-decoration-skip-ink: none;
+    color: var(--font);
+    background-color: var(--main);
+    letter-spacing: 0.16rem;
+    border-radius: 0px 16px 16px 0px;
+    font-size: 1.3rem;
+    box-shadow: var(--shadow);    
+    font-weight: bolder;
 }
 
-h1 {
-    
-}
 main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -57,14 +55,19 @@ main {
 }
 
 .card{
-    border: 7.5px solid var(--secondary);
-    border-radius: 30px;
     aspect-ratio: 1;
     font-size: 2em;
-    color: rgb(23, 56, 94);
+    color: var(--font);
     word-wrap: break-word;
-    padding: 2px;
-    text-shadow:3px 3px 500px red;
+    border-radius: 0px 25px 0px 25px;
+    padding: 10%;
+    line-height: 90%; 
+    box-shadow: var(--shadow);    
+    background-color: var(--main);
+}
+
+.card > span {
+    /* change bg color */
 }
 
 #addOption {
@@ -72,11 +75,50 @@ main {
     top: 80%;
     left: 90%;
     width: 5rem;
-    border: 5px solid var(--secondary);
     background-color: transparent;
     border-radius: 50%;
     aspect-ratio: 1;
     font-size: 3.5em;
-    color: var(--main);
+    color: var(--font);
+    cursor: pointer;
+    border: none;
+    background-color: var(--main);
+    box-shadow: var(--shadow);    
+}
+
+
+#addBookForm {
+    position: sticky;
+    top: 10vh;
+    background-color: var(--main);
+    position: sticky;
+    top: 10vh;
+    box-shadow: var(--shadow);
+    padding: 20px;
+    padding-right: 0;
+    border-radius: 16px 0px 0px 16px;
+    font-size: larger;
+}
+
+.hidden {
+    display: block;
+    visibility: hidden;
+}
+
+.show {
+    
+}
+
+
+input[type = "text"] {
+    width: 80%;
+    font-size: smaller;
+    border-radius: 5px;
+    background-color: var(--main);
+    background-color: var(--background);
+}
+
+button {
+    cursor: pointer;
 }
 
