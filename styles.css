@@ -66,9 +66,6 @@ main {
     background-color: var(--main);
 }
 
-.card > span {
-    /* change bg color */
-}
 
 #addOption {
     position: fixed;
@@ -105,10 +102,6 @@ main {
     visibility: hidden;
 }
 
-.show {
-    
-}
-
 
 input[type = "text"] {
     width: 80%;
@@ -120,5 +113,13 @@ input[type = "text"] {
 
 button {
     cursor: pointer;
+}
+
+.green {
+    background-color: var(--green);
+}
+
+.red {
+    background-color: var(--red);
 }
 
