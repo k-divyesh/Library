@@ -61,7 +61,7 @@ function cardText(i) {
     if(library[i].read === true) var readOrNot = "<span>Read</span>"; 
     else var readOrNot = "<span>Not Read</span>";
 
-    var text = `'${library[i].name}'<br><br>-${library[i].author}<br><br>${library[i].pages} pages<br><br>${readOrNot}`;
+    var text = `'${library[i].name}'<br><br>—${library[i].author}<br><br>${library[i].pages} pages<br><br>${readOrNot}`;
     return text; 
 } 
 
@@ -75,7 +75,15 @@ function addToCard(message) {
     var span = card.lastChild;
     if (span.innerHTML.includes("Not Read")) span.classList.add("red")
     else span.classList.add("green")
-    // if(card.innerText.includes = "Not Read") span.classList.add("red")
-    // else span.classList.add("green")
+    
     cardContainer.appendChild(card);
+
+    span.addEventListener("click", function(e){
+        if (e.target.classList.contains("green")) e.target.innerHTML = "Not Read" 
+        else e.target.innerHTML = "Read"
+        e.target.classList.toggle("red")
+        e.target.classList.toggle("green")
+    })
 }
+
+

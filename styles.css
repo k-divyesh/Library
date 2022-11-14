@@ -5,7 +5,7 @@
     --green: #9FFF9C;
     --font: #050505;
     --red: #FF9C9C;
-    /* border */
+    /* border shadow*/
     --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
@@ -19,27 +19,30 @@ body, html {
 
 *{
     box-sizing: border-box;
-    font-family: 'Poppins', 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    padding: 10vh 0;
     display: flex;
     gap: 15%;
     align-items: start;
+    padding: 10vh 0;
 }
 
 header {
     position: sticky;
     top: 200px;
+
+    font-size: 1.3rem;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     padding: 6% 0.5%;
+    letter-spacing: 0.16rem;
+
     color: var(--font);
     background-color: var(--main);
-    letter-spacing: 0.16rem;
+
     border-radius: 0px 16px 16px 0px;
-    font-size: 1.3rem;
     box-shadow: var(--shadow);    
     font-weight: bolder;
 }
@@ -48,6 +51,7 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(6, 1fr);
+
     width: 60vw;
     padding-right: 5%;
     padding-bottom: 5%;
@@ -55,46 +59,48 @@ main {
 }
 
 .card{
-    aspect-ratio: 1;
-    font-size: 2em;
     color: var(--font);
-    word-wrap: break-word;
-    border-radius: 0px 25px 0px 25px;
-    padding: 10%;
-    line-height: 90%; 
-    box-shadow: var(--shadow);    
     background-color: var(--main);
+
+    word-wrap: break-word;
+    font-size: 1.5em;
+    line-height: 90%; 
+    aspect-ratio: 1;
+    
+    padding: 10%;
+    border-radius: 0px 25px 0px 25px;
+    box-shadow: var(--shadow);    
 }
 
 
 #addOption {
     position: fixed;
+    background-color: var(--main);
     top: 80%;
     left: 90%;
+
     width: 5rem;
-    background-color: transparent;
-    border-radius: 50%;
     aspect-ratio: 1;
+
     font-size: 3.5em;
+    border-radius: 50%;
     color: var(--font);
-    cursor: pointer;
+    
     border: none;
-    background-color: var(--main);
-    box-shadow: var(--shadow);    
+    box-shadow: var(--shadow);
+
 }
 
 
 #addBookForm {
     position: sticky;
     top: 10vh;
-    background-color: var(--main);
-    position: sticky;
-    top: 10vh;
-    box-shadow: var(--shadow);
     padding: 20px;
     padding-right: 0;
-    border-radius: 16px 0px 0px 16px;
+    background-color: var(--main);
     font-size: larger;
+    border-radius: 16px 0px 0px 16px;
+    box-shadow: var(--shadow);
 }
 
 .hidden {
@@ -104,22 +110,26 @@ main {
 
 
 input[type = "text"] {
+    background-color: var(--main);
+    background-color: var(--background);
     width: 80%;
     font-size: smaller;
     border-radius: 5px;
-    background-color: var(--main);
-    background-color: var(--background);
 }
 
-button {
+#addOption, button, .green, .red{
     cursor: pointer;
 }
 
 .green {
     background-color: var(--green);
+    padding: 2px;
+    border-radius: 10px;
 }
 
 .red {
     background-color: var(--red);
+    padding: 2px;
+    border-radius: 10px;
 }
 
